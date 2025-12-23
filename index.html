@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Worldwide | The New Generation of Travel</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1369289217531728');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1369289217531728&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcfcfc;
+            color: #1a1a1a;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .cinzel { font-family: 'Cinzel', serif; }
+
+        .gold-brand {
+            background: linear-gradient(to bottom, #d4af37, #b38728);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+        }
+
+        .gold-cta {
+            background: linear-gradient(135deg, #d4af37 0%, #b38728 100%);
+            color: white;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+        }
+
+        .gold-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(179, 135, 40, 0.2);
+        }
+
+        .split-container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .image-side {
+            width: 50%;
+            background: url('https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover;
+            position: relative;
+        }
+
+        @media (min-width: 1025px) {
+            .image-side::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to right, rgba(255,255,255,0) 90%, rgba(252,252,252,1) 100%);
+            }
+        }
+
+        .content-side {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem 2rem;
+            background: #fcfcfc;
+            text-align: center;
+        }
+
+        .selling-point {
+            text-align: left;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .gold-check { color: #d4af37; font-size: 0.9rem; }
+
+        @media (max-width: 1024px) {
+            body, html { overflow-y: auto; height: auto; }
+            .split-container { flex-direction: column; height: auto; }
+            .image-side { width: 100%; height: 30vh; min-height: 250px; }
+            .content-side { width: 100%; padding: 2rem 1.5rem; height: auto; }
+            .cinzel-main-heading { font-size: 1.8rem !important; }
+        }
+
+        .input-field {
+            border: 1px solid #eaeaea;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            border-color: #d4af37;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="split-container">
+        <!-- Imagery Side -->
+        <div class="image-side"></div>
+
+        <!-- Content Side -->
+        <div class="content-side">
+            
+            <!-- Branding Header -->
+            <header>
+                <div class="gold-brand text-base uppercase tracking-[0.3em]">Phoenix Worldwide</div>
+                <div class="text-[8px] tracking-[0.3em] uppercase text-gray-400 font-semibold mt-1">The New Generation of Travel</div>
+            </header>
+
+            <!-- Main Conversion Logic -->
+            <main class="w-full max-w-sm">
+                <h1 class="cinzel cinzel-main-heading text-3xl md:text-4xl font-light text-gray-900 tracking-tight uppercase leading-tight mb-6">
+                    Make Money Online <br>
+                    <span class="gold-brand font-bold italic">With Travel</span>
+                </h1>
+
+                <!-- Compact Selling Points -->
+                <div class="space-y-4 mb-8 text-left">
+                    <div class="selling-point">
+                        <span class="gold-check">✅</span>
+                        <div>
+                            <p class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-gray-800">Get Paid to Book Travel</p>
+                            <p class="text-[10px] text-gray-400 font-light">Earn commissions directly from bookings. No inventory needed.</p>
+                        </div>
+                    </div>
+
+                    <div class="selling-point">
+                        <span class="gold-check">✅</span>
+                        <div>
+                            <p class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-gray-800">No Prior Experience Required</p>
+                            <p class="text-[10px] text-gray-400 font-light">Full mentorship and training systems included from day one.</p>
+                        </div>
+                    </div>
+
+                    <div class="selling-point">
+                        <span class="gold-check">✅</span>
+                        <div>
+                            <p class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-gray-800">Income That Moves With You</p>
+                            <p class="text-[10px] text-gray-400 font-light">Build residual income from anywhere in the world with Wi-Fi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Invitation Request Form -->
+                <div class="space-y-3">
+                    <input 
+                        type="email" 
+                        id="emailField"
+                        placeholder="ENTER EMAIL ADDRESS" 
+                        class="input-field w-full px-4 py-4 rounded-sm text-gray-700 font-light text-center text-[10px] tracking-[0.1em] placeholder:text-gray-300"
+                    >
+                    <button 
+                        id="submitBtn"
+                        class="gold-cta w-full py-4 rounded-sm text-[10px] shadow-md"
+                    >
+                        Request Instant Access
+                    </button>
+                    <p class="text-[7px] text-gray-300 uppercase tracking-[0.3em] font-bold">
+                        Private Invitation • Established MMXXV
+                    </p>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="opacity-30">
+                <p class="text-[7px] tracking-[0.5em] text-gray-400 uppercase">© Phoenix Worldwide Concierge</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('submitBtn');
+        const email = document.getElementById('emailField');
+
+        const handleSubmit = () => {
+            const val = email.value.trim();
+            if(!val.includes('@') || val.length < 5) {
+                email.style.borderColor = '#d4af37';
+                email.placeholder = "VALID EMAIL REQUIRED";
+                return;
+            }
+
+            // --- TRACKING DE META PIXEL ---
+            // Activamos el evento 'Lead' para registrar la conversión
+            if(typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Phoenix WhatsApp Lead',
+                    value: 0.00,
+                    currency: 'USD'
+                });
+            }
+
+            btn.disabled = true;
+            btn.innerText = "AUTHENTICATING...";
+            
+            // CONFIGURA TU WHATSAPP AQUÍ
+            // Reemplaza 'TU_NUMERO_AQUI' con tu número (ej: 5215512345678)
+            const telefono = "TU_NUMERO_AQUI"; 
+            const mensaje = encodeURIComponent("Hi! I'm interested in Phoenix Worldwide. My email is: " + val);
+            const destination = `https://wa.me/${telefono}?text=${mensaje}`;
+
+            // Redirección con un pequeño delay para asegurar que el pixel dispare
+            setTimeout(() => {
+                window.location.href = destination;
+            }, 1000);
+        };
+
+        btn.addEventListener('click', handleSubmit);
+        email.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleSubmit();
+        });
+    </script>
+</body>
+</html>
