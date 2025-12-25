@@ -32,8 +32,7 @@
             font-family: 'Montserrat', sans-serif;
             background-color: #fcfcfc;
             color: #1a1a1a;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
         }
 
         .cinzel { font-family: 'Cinzel', serif; }
@@ -43,14 +42,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 700;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.25em;
         }
 
         .gold-cta {
             background: linear-gradient(135deg, #d4af37 0%, #b38728 100%);
             color: white;
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            letter-spacing: 0.15em;
+            letter-spacing: 0.2em;
             font-weight: 600;
             text-transform: uppercase;
             border: none;
@@ -58,13 +57,14 @@
         }
 
         .gold-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(179, 135, 40, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(179, 135, 40, 0.3);
+            filter: contrast(1.1);
         }
 
         .split-container {
             display: flex;
-            height: 100vh;
+            min-height: 100vh;
             width: 100%;
         }
 
@@ -79,7 +79,7 @@
                 content: '';
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(to right, rgba(255,255,255,0) 90%, rgba(252,252,252,1) 100%);
+                background: linear-gradient(to right, rgba(255,255,255,0) 85%, rgba(252,252,252,1) 100%);
             }
         }
 
@@ -89,115 +89,114 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 2.5rem 2rem;
+            padding: 4rem 2rem;
+            position: relative;
             background: #fcfcfc;
             text-align: center;
         }
 
-        .selling-point {
-            text-align: left;
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-        }
-
-        .gold-check { color: #d4af37; font-size: 0.9rem; }
-
         @media (max-width: 1024px) {
-            body, html { overflow-y: auto; height: auto; }
-            .split-container { flex-direction: column; height: auto; }
-            .image-side { width: 100%; height: 30vh; min-height: 250px; }
-            .content-side { width: 100%; padding: 2rem 1.5rem; height: auto; }
-            .cinzel-main-heading { font-size: 1.8rem !important; }
+            .split-container { flex-direction: column; min-height: auto; }
+            .image-side { width: 100%; height: 40vh; min-height: 350px; }
+            .image-side::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom, rgba(255,255,255,0) 80%, rgba(252,252,252,1) 100%);
+            }
+            .content-side { width: 100%; padding: 3rem 1.5rem; min-height: 60vh; }
+            .cinzel-main-heading { font-size: 2.25rem !important; line-height: 1.1 !important; }
         }
 
         .input-field {
             border: 1px solid #eaeaea;
             background: #fff;
             transition: all 0.3s ease;
+            appearance: none;
         }
 
         .input-field:focus {
             border-color: #d4af37;
             outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.05);
+        }
+
+        .accent-line {
+            width: 30px;
+            height: 1px;
+            background: #d4af37;
+            opacity: 0.4;
         }
     </style>
 </head>
 <body>
 
     <div class="split-container">
-        <!-- Imagery Side -->
+        
+        <!-- Background Imagery -->
         <div class="image-side"></div>
 
-        <!-- Content Side -->
+        <!-- Conversion Content -->
         <div class="content-side">
             
-            <!-- Branding Header -->
-            <header>
-                <div class="gold-brand text-base uppercase tracking-[0.3em]">Phoenix Worldwide</div>
-                <div class="text-[8px] tracking-[0.3em] uppercase text-gray-400 font-semibold mt-1">The New Generation of Travel</div>
+            <header class="w-full">
+                <div class="flex items-center justify-center space-x-3 mb-2">
+                    <div class="accent-line"></div>
+                    <div class="gold-brand text-lg md:text-xl uppercase">
+                        Phoenix Worldwide
+                    </div>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="text-[9px] tracking-[0.4em] uppercase text-gray-400 font-semibold">
+                    The New Generation of Travel
+                </div>
             </header>
 
-            <!-- Main Conversion Logic -->
-            <main class="w-full max-w-sm">
-                <h1 class="cinzel cinzel-main-heading text-3xl md:text-4xl font-light text-gray-900 tracking-tight uppercase leading-tight mb-6">
-                    Make Money Online <br>
-                    <span class="gold-brand font-bold italic">With Travel</span>
-                </h1>
-
-                <!-- Compact Selling Points -->
-                <div class="space-y-4 mb-8 text-left">
-                    <div class="selling-point">
-                        <span class="gold-check">✅</span>
-                        <div>
-                            <p class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-gray-800">Get Paid to Book Travel</p>
-                            <p class="text-[10px] text-gray-400 font-light">Earn commissions directly from bookings. No inventory needed.</p>
-                        </div>
-                    </div>
-
-                    <div class="selling-point">
-                        <span class="gold-check">✅</span>
-                        <div>
-                            <p class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-gray-800">No Prior Experience Required</p>
-                            <p class="text-[10px] text-gray-400 font-light">Full mentorship and training systems included from day one.</p>
-                        </div>
-                    </div>
-
-                    <div class="selling-point">
-                        <span class="gold-check">✅</span>
-                        <div>
-                            <p class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-gray-800">Income That Moves With You</p>
-                            <p class="text-[10px] text-gray-400 font-light">Build residual income from anywhere in the world with Wi-Fi.</p>
-                        </div>
-                    </div>
+            <main class="w-full max-w-sm py-8 md:py-12">
+                <div class="space-y-6">
+                    <h1 class="cinzel cinzel-main-heading text-4xl md:text-5xl font-light text-gray-900 tracking-tight uppercase">
+                        Make Money <br> Online <br>
+                        <span class="gold-brand font-bold italic">With Travel</span>
+                    </h1>
+                    <div class="w-10 h-[1px] bg-gray-200 mx-auto"></div>
                 </div>
 
-                <!-- Invitation Request Form -->
-                <div class="space-y-3">
+                <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed tracking-wide italic mt-8">
+                    “The Elite Blueprint. Full mentorship included. Work remote. Powered by Evolution.”
+                </p>
+
+                <div class="mt-10 space-y-4">
                     <input 
                         type="email" 
                         id="emailField"
-                        placeholder="ENTER EMAIL ADDRESS" 
-                        class="input-field w-full px-4 py-4 rounded-sm text-gray-700 font-light text-center text-[10px] tracking-[0.1em] placeholder:text-gray-300"
+                        required
+                        placeholder="EMAIL ADDRESS" 
+                        class="input-field w-full px-4 py-5 rounded-sm text-gray-700 font-light text-center text-xs tracking-[0.2em] placeholder:text-gray-300 uppercase"
                     >
+                    
                     <button 
                         id="submitBtn"
-                        class="gold-cta w-full py-4 rounded-sm text-[10px] shadow-md"
+                        class="gold-cta w-full py-5 rounded-sm text-xs shadow-md"
                     >
                         Request Instant Access
                     </button>
-                    <p class="text-[7px] text-gray-300 uppercase tracking-[0.3em] font-bold">
-                        Private Invitation • Established MMXXV
+                    
+                    <p class="text-[8px] text-gray-300 uppercase tracking-[0.4em] font-bold mt-4">
+                        Private Access • Established MMXXV
                     </p>
                 </div>
             </main>
 
-            <!-- Footer -->
-            <footer class="opacity-30">
-                <p class="text-[7px] tracking-[0.5em] text-gray-400 uppercase">© Phoenix Worldwide Concierge</p>
+            <footer class="w-full">
+                <div class="opacity-10 flex justify-center mb-4">
+                    <svg width="30" height="30" viewBox="0 0 100 100" fill="currentColor">
+                        <path d="M50 0L61.8 35.4H98.2L68.2 56.6L80 92L50 70.8L20 92L31.8 56.6L1.8 35.4H38.2L50 0Z" />
+                    </svg>
+                </div>
+                <p class="text-[8px] tracking-[0.5em] text-gray-300 uppercase">
+                    © Phoenix Worldwide Concierge
+                </p>
             </footer>
-
         </div>
     </div>
 
@@ -207,34 +206,34 @@
 
         const handleSubmit = () => {
             const val = email.value.trim();
+            
             if(!val.includes('@') || val.length < 5) {
                 email.style.borderColor = '#d4af37';
                 email.placeholder = "VALID EMAIL REQUIRED";
+                email.value = "";
                 return;
             }
 
             // --- TRACKING DE META PIXEL ---
-            // Activamos el evento 'Lead' para registrar la conversión
             if(typeof fbq !== 'undefined') {
                 fbq('track', 'Lead', {
-                    content_name: 'Phoenix WhatsApp Lead',
+                    content_name: 'Phoenix Enrollment Lead',
+                    content_category: 'Evolution Travel Registration',
                     value: 0.00,
                     currency: 'USD'
                 });
             }
 
             btn.disabled = true;
-            btn.innerText = "AUTHENTICATING...";
-            
-            // CONFIGURA TU WHATSAPP AQUÍ
-            // Reemplaza 'TU_NUMERO_AQUI' con tu número (ej: 5215512345678)
-            const telefono = "TU_NUMERO_AQUI"; 
-            const mensaje = encodeURIComponent("Hi! I'm interested in Phoenix Worldwide. My email is: " + val);
-            const destination = `https://wa.me/${telefono}?text=${mensaje}`;
+            btn.innerText = "REDIRECTING...";
+            btn.style.opacity = "0.7";
 
-            // Redirección con un pequeño delay para asegurar que el pixel dispare
+            // NUEVO ENLACE DE INSCRIPCIÓN
+            const enrollLink = "https://www.cs4000.net/ET/enroll/country.asp?sponsorid=452690";
+
+            // Delay para asegurar el disparo del Pixel antes de salir
             setTimeout(() => {
-                window.location.href = destination;
+                window.location.href = enrollLink;
             }, 1000);
         };
 
